@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Munadi Bot</title>
-    <meta name="description" content="Munadi Bot - Your Ultimate Discord Assistant for moderation, music, and more.">
+    <title>مُنادي | Munadi Bot</title>
+    <meta name="description" content="مُنادي Munadi Bot - Your Ultimate Discord Assistant for moderation, music, and more.">
     <meta name="theme-color" content="#0f172a">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -350,6 +350,102 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
+        /* ===== Developer Card ===== */
+        .dev-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 24px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .dev-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e94560, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8em;
+            box-shadow: 0 0 30px rgba(233, 69, 96, 0.3);
+            position: relative;
+        }
+        .dev-avatar::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 18px;
+            height: 18px;
+            background: #22c55e;
+            border-radius: 50%;
+            border: 3px solid #0f172a;
+        }
+        .dev-info {
+            text-align: center;
+        }
+        .dev-name {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+        .dev-role {
+            color: #8b5cf6;
+            font-weight: 600;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        .dev-discord-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(88, 101, 242, 0.15);
+            border: 1px solid rgba(88, 101, 242, 0.3);
+            border-radius: 12px;
+            color: #7289da;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+        .dev-discord-tag .discord-icon {
+            font-size: 1.2em;
+        }
+        .dev-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 5px;
+        }
+        .dev-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: rgba(88, 101, 242, 0.1);
+            border: 1px solid rgba(88, 101, 242, 0.25);
+            border-radius: 12px;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+        .dev-link:hover {
+            background: rgba(88, 101, 242, 0.25);
+            border-color: rgba(88, 101, 242, 0.5);
+            transform: translateY(-3px);
+            color: #fff;
+        }
+        .dev-link .link-icon {
+            font-size: 1.2em;
+        }
+
         /* ===== Support / CTA ===== */
         .support-section {
             background: linear-gradient(135deg, rgba(233,69,96,0.1), rgba(139,92,246,0.1));
@@ -562,6 +658,7 @@
         <a href="#status" data-i18n="nav_status">Status</a>
         <a href="#faq" data-i18n="nav_faq">FAQ</a>
         <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#developer" data-i18n="nav_dev">Developer</a>
         <button class="lang-btn" id="langToggle">العربية</button>
     </nav>
 
@@ -570,7 +667,7 @@
         <!-- Hero -->
         <section id="home">
             <div class="bot-icon">🤖</div>
-            <h1 data-i18n="hero_title">Munadi Bot</h1>
+            <h1 data-i18n="hero_title">مُنادي | Munadi</h1>
             <p class="subtitle" data-i18n="hero_subtitle">Your Ultimate Discord Assistant</p>
             <div class="hero-buttons">
                 <a href="#" class="btn" data-i18n="hero_btn">Add to Discord</a>
@@ -600,7 +697,7 @@
 
         <!-- Features -->
         <section id="features" class="reveal">
-            <h2 class="section-title" data-i18n="features_title">Why Munadi?</h2>
+            <h2 class="section-title" data-i18n="features_title">Why مُنادي?</h2>
             <p class="section-subtitle" data-i18n="features_subtitle">Everything your server needs, in one bot.</p>
             <div class="features">
                 <div class="feature">
@@ -714,11 +811,11 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span data-i18n="faq2_q">Is Munadi Bot free to use?</span>
+                        <span data-i18n="faq2_q">Is Munadi free to use?</span>
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p data-i18n="faq2_a">Yes! Munadi Bot is completely free with all core features. We may offer premium features in the future, but the essentials will always remain free.</p>
+                        <p data-i18n="faq2_a">Yes! Munadi is completely free with all core features. We may offer premium features in the future, but the essentials will always remain free.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -746,7 +843,30 @@
         <section id="about" class="reveal">
             <h2 class="section-title" data-i18n="about_title">About Us</h2>
             <div class="about-text">
-                <p data-i18n="about_desc">Munadi Bot was created to bring the best moderation, entertainment, and utility features into a single, easy-to-use package. Whether you are managing a large community server or just hanging out with friends, Munadi adapts to your needs and keeps your server active and safe.</p>
+                <p data-i18n="about_desc">Munadi was created to bring the best moderation, entertainment, and utility features into a single, easy-to-use package. Whether you are managing a large community server or just hanging out with friends, Munadi adapts to your needs and keeps your server active and safe.</p>
+            </div>
+        </section>
+
+        <!-- Developer -->
+        <section id="developer" class="reveal">
+            <h2 class="section-title" data-i18n="dev_title">The Developer</h2>
+            <p class="section-subtitle" data-i18n="dev_subtitle">The person behind Munadi.</p>
+            <div class="dev-card">
+                <div class="dev-avatar">👨‍💻</div>
+                <div class="dev-info">
+                    <div class="dev-name">amoshayeb</div>
+                    <div class="dev-role" data-i18n="dev_role">Founder & Developer</div>
+                    <div class="dev-discord-tag">
+                        <span class="discord-icon">🎮</span>
+                        <span>amoshayeb</span>
+                    </div>
+                </div>
+                <div class="dev-links">
+                    <a href="https://discord.gg/PZpSRPaRGg" target="_blank" rel="noopener noreferrer" class="dev-link">
+                        <span class="link-icon">💬</span>
+                        <span data-i18n="dev_join_server">Join Discord Server</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -756,7 +876,7 @@
                 <h2 class="section-title" data-i18n="support_title">Need Help?</h2>
                 <p class="section-subtitle" data-i18n="support_desc">Join our community or reach out directly.</p>
                 <div class="support-links">
-                    <a href="#" class="support-link">
+                    <a href="https://discord.gg/PZpSRPaRGg" target="_blank" rel="noopener noreferrer" class="support-link">
                         <span class="link-icon">💬</span>
                         <span data-i18n="support_discord">Support Server</span>
                     </a>
@@ -764,7 +884,7 @@
                         <span class="link-icon">📖</span>
                         <span data-i18n="support_docs">Documentation</span>
                     </a>
-                    <a href="#" class="support-link">
+                    <a href="https://discord.gg/PZpSRPaRGg" target="_blank" rel="noopener noreferrer" class="support-link">
                         <span class="link-icon">🐛</span>
                         <span data-i18n="support_bugs">Report a Bug</span>
                     </a>
@@ -776,11 +896,10 @@
 
     <!-- Footer -->
     <footer>
-        <span class="footer-text" data-i18n="footer_text">&copy; 2026 Munadi Bot. All rights reserved.</span>
+        <span class="footer-text" data-i18n="footer_text">&copy; 2026 مُنادي | Munadi. All rights reserved.</span>
         <div class="footer-links">
-            <a href="#" title="Discord" aria-label="Discord">💬</a>
-            <a href="#" title="GitHub" aria-label="GitHub">🔗</a>
-            <a href="#" title="Twitter / X" aria-label="Twitter">📢</a>
+            <a href="https://discord.gg/PZpSRPaRGg" target="_blank" rel="noopener noreferrer" title="Discord" aria-label="Discord">💬</a>
+            <a href="https://github.com/nasshnassh" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">🔗</a>
         </div>
     </footer>
 
@@ -792,11 +911,11 @@
         const translations = {
             en: {
                 nav_home: "Home", nav_features: "Features", nav_commands: "Commands",
-                nav_status: "Status", nav_faq: "FAQ", nav_about: "About",
-                hero_title: "Munadi Bot", hero_subtitle: "Your Ultimate Discord Assistant",
+                nav_status: "Status", nav_faq: "FAQ", nav_about: "About", nav_dev: "Developer",
+                hero_title: "مُنادي | Munadi", hero_subtitle: "Your Ultimate Discord Assistant",
                 hero_btn: "Add to Discord", hero_btn2: "Learn More",
                 stat_servers: "Servers", stat_users: "Users", stat_commands: "Commands", stat_uptime: "Uptime", stat_uptime_val: "99.9%",
-                features_title: "Why Munadi?", features_subtitle: "Everything your server needs, in one bot.",
+                features_title: "Why مُنادي?", features_subtitle: "Everything your server needs, in one bot.",
                 feat1_title: "Lightning Fast", feat1_desc: "Experience zero lag with our highly optimized response engine.",
                 feat2_title: "Highly Secure", feat2_desc: "Your server's safety is our priority. Built with advanced security.",
                 feat3_title: "Smart AI", feat3_desc: "Powerful features and intelligent commands at your fingertips.",
@@ -817,25 +936,27 @@
                 faq_title: "Frequently Asked Questions", faq_subtitle: "Got questions? We have answers.",
                 faq1_q: "How do I add Munadi to my server?",
                 faq1_a: "Simply click the \"Add to Discord\" button at the top of the page. You'll be redirected to Discord where you can select your server and authorize the bot permissions.",
-                faq2_q: "Is Munadi Bot free to use?",
-                faq2_a: "Yes! Munadi Bot is completely free with all core features. We may offer premium features in the future, but the essentials will always remain free.",
+                faq2_q: "Is Munadi free to use?",
+                faq2_a: "Yes! Munadi is completely free with all core features. We may offer premium features in the future, but the essentials will always remain free.",
                 faq3_q: "What permissions does the bot need?",
                 faq3_a: "Munadi requires basic permissions for reading messages, sending messages, managing roles (for moderation), and connecting to voice channels (for music). You can customize permissions during setup.",
                 faq4_q: "How can I report a bug or suggest a feature?",
                 faq4_a: "Join our support Discord server and use the appropriate channels to report bugs or suggest new features. Our team actively reviews all submissions.",
                 about_title: "About Us",
-                about_desc: "Munadi Bot was created to bring the best moderation, entertainment, and utility features into a single, easy-to-use package. Whether you are managing a large community server or just hanging out with friends, Munadi adapts to your needs and keeps your server active and safe.",
+                about_desc: "Munadi was created to bring the best moderation, entertainment, and utility features into a single, easy-to-use package. Whether you are managing a large community server or just hanging out with friends, Munadi adapts to your needs and keeps your server active and safe.",
+                dev_title: "The Developer", dev_subtitle: "The person behind Munadi.",
+                dev_role: "Founder & Developer", dev_join_server: "Join Discord Server",
                 support_title: "Need Help?", support_desc: "Join our community or reach out directly.",
                 support_discord: "Support Server", support_docs: "Documentation", support_bugs: "Report a Bug",
-                footer_text: "© 2026 Munadi Bot. All rights reserved."
+                footer_text: "© 2026 مُنادي | Munadi. All rights reserved."
             },
             ar: {
                 nav_home: "الرئيسية", nav_features: "المميزات", nav_commands: "الأوامر",
-                nav_status: "الحالة", nav_faq: "الأسئلة", nav_about: "نبذة عنا",
-                hero_title: "بوت منادي", hero_subtitle: "مساعدك الأفضل على ديسكورد",
+                nav_status: "الحالة", nav_faq: "الأسئلة", nav_about: "نبذة عنا", nav_dev: "المطور",
+                hero_title: "بوت مُنادي", hero_subtitle: "مساعدك الأفضل على ديسكورد",
                 hero_btn: "أضف إلى ديسكورد", hero_btn2: "اكتشف المزيد",
                 stat_servers: "سيرفر", stat_users: "مستخدم", stat_commands: "أمر", stat_uptime: "وقت التشغيل", stat_uptime_val: "٩٩.٩٪",
-                features_title: "لماذا منادي؟", features_subtitle: "كل ما يحتاجه سيرفرك في بوت واحد.",
+                features_title: "لماذا مُنادي؟", features_subtitle: "كل ما يحتاجه سيرفرك في بوت واحد.",
                 feat1_title: "سريع كالبرق", feat1_desc: "استمتع بتجربة خالية من التقطيع مع محرك الاستجابة المحسن لدينا.",
                 feat2_title: "آمن جداً", feat2_desc: "أمان سيرفرك هو أولويتنا. مبني بأنظمة حماية متقدمة.",
                 feat3_title: "ذكاء اصطناعي", feat3_desc: "ميزات قوية وأوامر ذكية بين يديك.",
@@ -854,19 +975,21 @@
                 status_response: "زمن الاستجابة", status_api: "حالة API", status_api_val: "متصل",
                 status_version: "الإصدار", status_last_update: "آخر تحديث", status_last_update_val: "أغسطس ٢٠٢٦",
                 faq_title: "الأسئلة الشائعة", faq_subtitle: "عندك أسئلة؟ عندنا الإجابات.",
-                faq1_q: "كيف أضيف منادي إلى سيرفري؟",
+                faq1_q: "كيف أضيف مُنادي إلى سيرفري؟",
                 faq1_a: "ببساطة اضغط على زر \"أضف إلى ديسكورد\" في أعلى الصفحة. سيتم توجيهك إلى ديسكورد حيث يمكنك اختيار سيرفرك والسماح بصلاحيات البوت.",
-                faq2_q: "هل بوت منادي مجاني؟",
-                faq2_a: "نعم! بوت منادي مجاني تماماً مع جميع الميزات الأساسية. قد نقدم ميزات مميزة في المستقبل، لكن الأساسيات ستبقى مجانية دائماً.",
+                faq2_q: "هل بوت مُنادي مجاني؟",
+                faq2_a: "نعم! بوت مُنادي مجاني تماماً مع جميع الميزات الأساسية. قد نقدم ميزات مميزة في المستقبل، لكن الأساسيات ستبقى مجانية دائماً.",
                 faq3_q: "ما الصلاحيات التي يحتاجها البوت؟",
-                faq3_a: "يحتاج منادي صلاحيات أساسية لقراءة الرسائل وإرسالها وإدارة الأدوار (للإشراف) والاتصال بالقنوات الصوتية (للموسيقى). يمكنك تخصيص الصلاحيات أثناء الإعداد.",
+                faq3_a: "يحتاج مُنادي صلاحيات أساسية لقراءة الرسائل وإرسالها وإدارة الأدوار (للإشراف) والاتصال بالقنوات الصوتية (للموسيقى). يمكنك تخصيص الصلاحيات أثناء الإعداد.",
                 faq4_q: "كيف يمكنني الإبلاغ عن خلل أو اقتراح ميزة؟",
                 faq4_a: "انضم إلى سيرفر الدعم الخاص بنا واستخدم القنوات المناسبة للإبلاغ عن الأخطاء أو اقتراح ميزات جديدة. فريقنا يراجع جميع المقترحات بنشاط.",
                 about_title: "نبذة عنا",
-                about_desc: "تم إنشاء بوت منادي لجمع أفضل ميزات الإشراف، الترفيه، والأدوات في حزمة واحدة سهلة الاستخدام. سواء كنت تدير سيرفر مجتمعي كبير أو تقضي وقتاً مع أصدقائك، منادي يتكيف مع احتياجاتك ويبقي سيرفرك نشطاً وآمناً.",
+                about_desc: "تم إنشاء بوت مُنادي لجمع أفضل ميزات الإشراف، الترفيه، والأدوات في حزمة واحدة سهلة الاستخدام. سواء كنت تدير سيرفر مجتمعي كبير أو تقضي وقتاً مع أصدقائك، مُنادي يتكيف مع احتياجاتك ويبقي سيرفرك نشطاً وآمناً.",
+                dev_title: "المطور", dev_subtitle: "الشخص اللي يقف وراء بوت مُنادي.",
+                dev_role: "المؤسس والمطور", dev_join_server: "انضم لسيرفر الديسكورد",
                 support_title: "تحتاج مساعدة؟", support_desc: "انضم لمجتمعنا أو تواصل معنا مباشرة.",
                 support_discord: "سيرفر الدعم", support_docs: "التوثيق", support_bugs: "الإبلاغ عن خلل",
-                footer_text: "© ٢٠٢٦ بوت منادي. جميع الحقوق محفوظة."
+                footer_text: "© ٢٠٢٦ بوت مُنادي. جميع الحقوق محفوظة."
             }
         };
 
